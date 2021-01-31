@@ -17,6 +17,9 @@ const Header: React.FC = () => {
           Feed
         </a>
       </Link>
+      <Link href="/incremental-feed">
+          <a data-active={isActive('/incremental-feed')}>Feed(incremental)</a>
+        </Link>
       <style jsx>{`
         .bold {
           font-weight: bold;
@@ -48,6 +51,9 @@ const Header: React.FC = () => {
           <a className="bold" data-active={isActive('/')}>
             Feed
           </a>
+        </Link>
+        <Link href="/incremental-feed">
+          <a data-active={isActive('/incremental-feed')}>Feed(incremental)</a>
         </Link>
         <style jsx>{`
           .bold {
@@ -121,6 +127,9 @@ const Header: React.FC = () => {
             Feed
           </a>
         </Link>
+        <Link href="/incremental-feed">
+          <a data-active={isActive('/incremental-feed')}>Feed(incremental)</a>
+        </Link>
         <Link href="/drafts">
           <a data-active={isActive('/drafts')}>My drafts</a>
         </Link>
@@ -148,7 +157,7 @@ const Header: React.FC = () => {
     right = (
       <div className="right">
         <p>
-          {session.user.name} ({session.user.email})
+          {session.user.name}
         </p>
         <Link href="/create">
           <button>

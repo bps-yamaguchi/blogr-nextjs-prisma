@@ -12,7 +12,7 @@ export default async function handle(req, res) {
     data: {
       title: title,
       content: content,
-      author: { connect: { email: session?.user?.email } },
+      author: { connect: { name: session?.user?.name } },
     },
   })
   res.json(result)
